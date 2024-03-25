@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/src/css/index.css"  
 </head>
 <body bgcolor="lightblue">
-<div id="topbar">Bem-vindo ao gerenciador de tarefas Marinardo</div>
+<header class="header">Bem-vindo ao Marinardo: Gerenciador de tarefas</header>
 
     <div id="tudo">
         <input id="texto" placeholder="Escreva sua tarefa">
         <button id="bott" onclick="add();">add</button>
     </div>
 
+    
     <script>
         function add(){
             const x = document.createElement('x');
@@ -34,6 +35,24 @@
             x.appendChild(btFinalizar);
         }
     </script>
+
+
+<section id="space" class="space">
+    <h1>Com carinho...</h1>
+    <img id="bgspace" src="/src/img/telacinza.png" alt="">
+    <div class="spc-content">
+        <div class="space-desc">
+            <h2>Aqui tornamos sua vida mais organizada</h2>
+            <h3>A terapia para a procrastinação</h3>
+            <p>Este belo moço reduziu suas horas de procrastinação em 70% em uma semana <br>
+               A moça alega ter a ajudado nas metas dos estudos... 
+            </p>
+        </div>
+        <div class="img-spc">
+            <img src="/src/img/bernardoemaria2.jpg" alt="">
+        </div>
+    </div>
+</section>
 
 </div>
 </body>
