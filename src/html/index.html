@@ -4,36 +4,44 @@
     <title>dfddd</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/index.css"  
+    <link rel="stylesheet" href="/src/css/index.css">
 </head>
 <body bgcolor="lightblue">
 <header class="header">Bem-vindo ao Marinardo: Gerenciador de tarefas</header>
 
     <div id="tudo">
         <input id="texto" placeholder="Escreva sua tarefa">
+
         <button id="bott" onclick="add();">add</button>
     </div>
 
     
     <script>
         function add(){
-            const x = document.createElement('x');
+            const x = document.createElement('div');
             const y = document.createElement('h2');
             const texto = document.getElementById('texto').value;
-            y.innerHTML = texto;
-            y.id="y";
-            x.appendChild(y);
-            document.body.appendChild(x);
+                       
+            if(document.getElementById("texto").value == ""){
+                alert("Escreva algo. Está vazio!");
+            }else{
+                const btFinalizar = document.createElement('button');
+                btFinalizar.innerHTML = "Finalizado";
+                btFinalizar.id="bt";
+                btFinalizar.addEventListener('click', function(){
+                    x.remove();
+                })
+                y.innerHTML = texto;
+                y.id="y";
+                x.appendChild(btFinalizar);
+                x.appendChild(y);
+                document.body.appendChild(x);
 
-            const btFinalizar = document.createElement('button');
-            btFinalizar.innerHTML = "Finalizado";
-            btFinalizar.id="bt";
-            btFinalizar.addEventListener('click', function(){
-                x.remove();
-
-            })
-            x.appendChild(btFinalizar);
+            }
         }
+
+       
+
     </script>
 
 
@@ -54,6 +62,18 @@
     </div>
 </section>
 
+<footer class="footer">
+  </footer>
+
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
